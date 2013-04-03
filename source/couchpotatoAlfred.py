@@ -17,7 +17,7 @@ def get_data(method_name):
     try:
         res = urllib2.urlopen(req)
     except urllib2.URLError:
-        print "Connection timed out"
+        print "Can't connect to CouchPotato"
         raise SystemExit()
 
     return json.loads(res.read())
@@ -27,7 +27,7 @@ def open_browser():
     webbrowser.open(_HOST)
 
 
-def isRunning():
+def isAvailable():
     data = get_data("app.available")
     success = data['success']
     if success:
@@ -37,17 +37,17 @@ def isRunning():
 
 
 def get_version():
-    if isRunning():
+    if isAvailable():
         data = get_data("app.version")
         print data['version']
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"
 
 def ping():
-    if isRunning():
+    if isAvailable():
         print "CouchPotato is running!"
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"
 
 
 def add_movie_by_id(identifier):
@@ -71,7 +71,7 @@ def search_movie(query):
 
 
 def forced_search():
-    if isRunning():
+    if isAvailable():
         data = get_data("searcher.full_search")
         success = data['success']
         if success:
@@ -79,11 +79,11 @@ def forced_search():
         else:
             print "Error - Can't search right now"
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"
 
 
 def update():
-    if isRunning():
+    if isAvailable():
         data = get_data("updater.check")
         update_avail = data['update_available']
         if update_avail:
@@ -91,11 +91,11 @@ def update():
         else:
             print "No update available"
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"
 
 
 def restart():
-    if isRunning():
+    if isAvailable():
         data = get_data("app.restart")
         message = data['restart']
         if message:
@@ -103,12 +103,12 @@ def restart():
         else:
             print "Error - Can't restart right now"
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"
 
 
 def shutdown():
-    if isRunning():
+    if isAvailable():
         get_data("app.shutdown")
         print "CouchPotato is shutting down"
     else:
-        print "CouchPotato is not running"
+        print "CouchPotato is not available"

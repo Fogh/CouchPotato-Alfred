@@ -199,22 +199,6 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>from couchpotatoAlfred import get_version
-get_version()</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>618B8709-249D-4E0E-A3D8-322A79792A65</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
 				<string>from couchpotatoAlfred import forced_search
 forced_search()</string>
 				<key>type</key>
@@ -228,63 +212,19 @@ forced_search()</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>from couchpotatoAlfred import shutdown
-shutdown()</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9C851669-46EF-4BD0-AE10-4F98598B5592</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>couch update</string>
-				<key>subtext</key>
-				<string>Updates if a update is available</string>
+				<string>couch search</string>
 				<key>text</key>
-				<string>Check for CouchPotato update</string>
+				<string>Start a full search for all wanted movies</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>DAE472C5-E038-4353-9F6D-23B73F332F98</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>couch add</string>
-				<key>runningsubtext</key>
-				<string>Loading movies...</string>
-				<key>script</key>
-				<string>from couchpotatoAlfred import search_movie
-search_movie("{query}")</string>
-				<key>title</key>
-				<string>Add movie to wanted list</string>
-				<key>type</key>
-				<integer>3</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>A947BF94-3DBF-43E2-82C0-0926E4FF820B</string>
+			<string>A7F569AE-7328-415F-9DB3-F834F3E15EDD</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -306,176 +246,20 @@ open_browser()</string>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>keyword</key>
-				<string>couch id</string>
+				<string>couch update</string>
 				<key>subtext</key>
-				<string>eg. tt0168122</string>
+				<string>Updates if a update is available</string>
 				<key>text</key>
-				<string>Add movie with IMDB id</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>72A1A789-7145-4796-801D-7E0244D3C877</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>script</key>
-				<string>from couchpotatoAlfred import add_movie_by_id
-add_movie_by_id("{query}")</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>49355C68-5B5C-4119-B3A6-018F17336F37</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>from couchpotatoAlfred import restart
-restart()</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch restart</string>
-				<key>text</key>
-				<string>Restart CouchPotato</string>
+				<string>Check for CouchPotato update</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>D3424408-E6AA-49CF-A0DE-D210509459EB</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>from couchpotatoAlfred import update
-update()</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3EF28986-B831-4DF2-8E7A-1C1397A80304</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch version</string>
-				<key>text</key>
-				<string>Get version of CouchPotato</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>87DAA58E-CE0F-411F-AAE5-8350038C8EC7</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>CouchPotato</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>756FB138-C27A-484B-9FBA-72EC5657868E</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch ping</string>
-				<key>text</key>
-				<string>Check if CouchPotato is running and available</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8176D555-A0CF-45C6-B50B-F9B303D86C0C</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch</string>
-				<key>text</key>
-				<string>Open CouchPotato in your browser</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>5A5F7A0D-51CA-4F36-8BCC-EBA80B061093</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch search</string>
-				<key>text</key>
-				<string>Start a full search for all wanted movies</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>A7F569AE-7328-415F-9DB3-F834F3E15EDD</string>
+			<string>DAE472C5-E038-4353-9F6D-23B73F332F98</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -510,9 +294,227 @@ ping()</string>
 			<key>uid</key>
 			<string>040049F8-E6EC-439F-8992-D8867357178C</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>couch id</string>
+				<key>subtext</key>
+				<string>eg. tt0168122</string>
+				<key>text</key>
+				<string>Add movie to wanted list with IMDB id</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>72A1A789-7145-4796-801D-7E0244D3C877</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import update
+update()</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EF28986-B831-4DF2-8E7A-1C1397A80304</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import restart
+restart()</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>couch version</string>
+				<key>text</key>
+				<string>Get version of CouchPotato</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>87DAA58E-CE0F-411F-AAE5-8350038C8EC7</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import add_movie_by_id
+add_movie_by_id("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>49355C68-5B5C-4119-B3A6-018F17336F37</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>couch restart</string>
+				<key>text</key>
+				<string>Restart CouchPotato</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D3424408-E6AA-49CF-A0DE-D210509459EB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>CouchPotato</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>756FB138-C27A-484B-9FBA-72EC5657868E</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import get_version
+get_version()</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>618B8709-249D-4E0E-A3D8-322A79792A65</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>couch add</string>
+				<key>runningsubtext</key>
+				<string>Loading movies...</string>
+				<key>script</key>
+				<string>from couchpotatoAlfred import search_movie
+search_movie("{query}")</string>
+				<key>title</key>
+				<string>Add movie to wanted list</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A947BF94-3DBF-43E2-82C0-0926E4FF820B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>couch ping</string>
+				<key>text</key>
+				<string>Check if CouchPotato is running and available</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8176D555-A0CF-45C6-B50B-F9B303D86C0C</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import shutdown
+shutdown()</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9C851669-46EF-4BD0-AE10-4F98598B5592</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>couch</string>
+				<key>text</key>
+				<string>Open CouchPotato in your browser</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5A5F7A0D-51CA-4F36-8BCC-EBA80B061093</string>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Edit _HOST in couchpotatoAlfred.py to the URL where your CouchPotato is located.
+
+Edit _APIKEY in couchpotatoAlfred.py to your CouchPotato API key.</string>
 	<key>uidata</key>
 	<dict>
 		<key>040049F8-E6EC-439F-8992-D8867357178C</key>
