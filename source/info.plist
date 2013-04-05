@@ -670,9 +670,10 @@ update()</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Edit _HOST in couchpotatoAlfred.py to the URL where your CouchPotato is located.
+	<string>Setup:
 
-Edit _APIKEY in couchpotatoAlfred.py to your CouchPotato API key.</string>
+- Use the keyword couch api to set your API key.
+- If you host CouchPotato elsewhere than localhost use the keyword couch host to set your host URL.</string>
 	<key>uidata</key>
 	<dict>
 		<key>040049F8-E6EC-439F-8992-D8867357178C</key>
