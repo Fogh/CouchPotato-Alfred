@@ -1,14 +1,33 @@
 import json
 import urllib2
 import webbrowser
+from alp.settings import Settings
 from feedback import Feedback
 
-_HOST = "http://localhost:5050/"
-_APIKEY = "YOUR API KEY"
+_DEFAULTHOST = "http://localhost:5050"
+
+
+def set_APIKey(key):
+    Settings().set(apikey=key.strip())
+
+
+def get_APIKey():
+    return Settings().get("apikey")
+
+
+def set_host(url):
+    Settings().set(host=url.strip().rstrip("/"))
+
+
+def get_host():
+    return Settings().get("host", _DEFAULTHOST)
 
 
 def url():
-    return _HOST + "/api/" + _APIKEY + "/"
+    if get_APIKey():
+        return get_host() + "/api/" + get_APIKey() + "/"
+    else:
+        print "API key is not defined"
 
 
 def get_data(method_name):
@@ -24,7 +43,7 @@ def get_data(method_name):
 
 
 def open_browser():
-    webbrowser.open(_HOST)
+    webbrowser.open(get_host())
 
 
 def isAvailable():
