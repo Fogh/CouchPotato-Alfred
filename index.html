@@ -1,52 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Alfred workflow for controlling CouchPotato by Fogh</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Alfred workflow for controlling CouchPotato : Control CouchPotato from Alfred 2" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Alfred workflow for controlling CouchPotato</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Alfred workflow for controlling CouchPotato</h1>
-        <p>Control CouchPotato from Alfred 2</p>
 
-        <p class="view"><a href="https://github.com/Fogh/CouchPotato-Alfred">View the Project on GitHub <small>Fogh/CouchPotato-Alfred</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Fogh/CouchPotato-Alfred">View on GitHub</a>
 
+          <h1 id="project_title">Alfred workflow for controlling CouchPotato</h1>
+          <h2 id="project_tagline">Control CouchPotato from Alfred 2</h2>
 
-        <ul>
-          <li><a href="https://github.com/Fogh/CouchPotato-Alfred/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Fogh/CouchPotato-Alfred/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Fogh/CouchPotato-Alfred">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Fogh/CouchPotato-Alfred/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Fogh/CouchPotato-Alfred/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>CouchPotato-Alfred</h1>
 
 <p>Control <a href="https://couchpota.to/">CouchPotato</a> from <a href="http://www.alfredapp.com/">Alfred 2</a></p>
 
-<h2><img src="http://cl.ly/O2xp/Screen%20Shot%202013-04-04%20at%2020.02.13.png" alt="CouchPotato Alfred"></h2>
+<hr><p><img src="http://cl.ly/O2xp/Screen%20Shot%202013-04-04%20at%2020.02.13.png" alt="CouchPotato Alfred" title="Add movies to CouchPotato"></p>
+
+<h2>Download</h2>
 
 <p><a href="https://github.com/Fogh/CouchPotato-Alfred/raw/master/CouchPotato.alfredworkflow">Download workflow</a></p>
 
+<h2>Features:</h2>
+
 <ul>
-<li>Edit <strong>_HOST</strong> in "couchpotatoAlfred.py" to the URL where your CouchPotato is located. </li>
-<li>Edit <strong>_APIKEY</strong> in "couchpotatoAlfred.py" to your CouchPotato API key.</li>
+<li>Add movies to wanted list</li>
+<li>Do a forced search for movies on the wanted list</li>
+<li>Update CouchPotato</li>
+<li>Open CouchPotato webinterface</li>
+<li>Get the version of CouchPotato</li>
+<li>Ping CouchPotato</li>
+<li>Restart CouchPotato</li>
+<li>Shutdown CouchPotato</li>
+</ul><h2>Setup</h2>
+
+<ul>
+<li>Use the keyword <code>couch api</code> to set your API key.</li>
+<li>If you host CouchPotato elsewhere than localhost use the keyword <code>couch host</code> to set your host URL.</li>
 </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Fogh">Fogh</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Alfred workflow for controlling CouchPotato maintained by <a href="https://github.com/Fogh">Fogh</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
