@@ -3,7 +3,7 @@ import urllib2
 import webbrowser
 from feedback import Feedback
 
-_HOST = "http://localhost:5050"
+_HOST = "http://localhost:5050/"
 _APIKEY = "YOUR API KEY"
 
 
@@ -30,24 +30,19 @@ def open_browser():
 def isAvailable():
     data = get_data("app.available")
     success = data['success']
-    if success:
-        return True
-    else:
-        return False
+    if not success:
+        print "CouchPotato is not available"
+    return success
 
 
 def get_version():
     if isAvailable():
         data = get_data("app.version")
         print data['version']
-    else:
-        print "CouchPotato is not available"
 
 def ping():
     if isAvailable():
         print "CouchPotato is running!"
-    else:
-        print "CouchPotato is not available"
 
 
 def add_movie_by_id(identifier):
@@ -78,8 +73,6 @@ def forced_search():
             print "Searching for movies..."
         else:
             print "Error - Can't search right now"
-    else:
-        print "CouchPotato is not available"
 
 
 def update():
@@ -90,8 +83,6 @@ def update():
             print "Update available - Updating.."
         else:
             print "No update available"
-    else:
-        print "CouchPotato is not available"
 
 
 def restart():
@@ -102,13 +93,9 @@ def restart():
             print message.title()
         else:
             print "Error - Can't restart right now"
-    else:
-        print "CouchPotato is not available"
 
 
 def shutdown():
     if isAvailable():
         get_data("app.shutdown")
         print "CouchPotato is shutting down"
-    else:
-        print "CouchPotato is not available"
