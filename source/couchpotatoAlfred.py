@@ -7,8 +7,18 @@ from feedback import Feedback
 _DEFAULTHOST = "http://localhost:5050"
 
 
-def set_APIKey(key):
-    Settings().set(apikey=key.strip())
+def set_APIKey(key=""):
+    if key:
+        Settings().set(apikey=key.strip())
+        print "API key changed!"
+    else:
+        data = get_data()
+        success = data['success']
+        if success:
+            Settings().set(api_key=data['api_key'])
+            print "API key grabbed from CouchPotato"
+        else:
+            print "CouchPotato is password protected. Enter API key manually"
 
 
 def get_APIKey():
@@ -22,7 +32,6 @@ def set_host(url):
 def get_host():
     return Settings().get("host", _DEFAULTHOST)
 
-
 def url():
     if get_APIKey():
         return get_host() + "/api/" + get_APIKey() + "/"
@@ -30,8 +39,12 @@ def url():
         print "API key is not defined"
 
 
-def get_data(method_name):
-    req = urllib2.Request(url() + method_name)
+def get_data(method_name=""):
+    if method_name:
+        req = urllib2.Request(url() + method_name)
+    else:
+        req = urllib2.Request(get_host() + "/getkey/")
+
     req.add_header("Accept", "application/json")
     try:
         res = urllib2.urlopen(req)

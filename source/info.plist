@@ -164,7 +164,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1E595948-1B12-49BD-A2D3-FDAF006C426E</string>
+				<string>756FB138-C27A-484B-9FBA-72EC5657868E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -407,22 +407,6 @@ open_browser()</string>
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>from couchpotatoAlfred import restart
-restart()</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
 				<string>from couchpotatoAlfred import add_movie_by_id
@@ -434,6 +418,22 @@ add_movie_by_id("{query}")</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>49355C68-5B5C-4119-B3A6-018F17336F37</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import restart
+restart()</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -503,29 +503,6 @@ ping()</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>API Key changed!</string>
-				<key>title</key>
-				<string>CouchPotato</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1E595948-1B12-49BD-A2D3-FDAF006C426E</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -541,40 +518,6 @@ ping()</string>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>DAE472C5-E038-4353-9F6D-23B73F332F98</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>couch api</string>
-				<key>text</key>
-				<string>Set the API key for CouchPotato</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>D5CDAA16-A52D-4B6A-87A2-EC2F4FD1D311</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>couch search</string>
-				<key>text</key>
-				<string>Start a full search for all wanted movies</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>A7F569AE-7328-415F-9DB3-F834F3E15EDD</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -601,6 +544,40 @@ search_movie("{query}")</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A947BF94-3DBF-43E2-82C0-0926E4FF820B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>couch search</string>
+				<key>text</key>
+				<string>Start a full search for all wanted movies</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A7F569AE-7328-415F-9DB3-F834F3E15EDD</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>couch api</string>
+				<key>text</key>
+				<string>Set the API key for CouchPotato</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D5CDAA16-A52D-4B6A-87A2-EC2F4FD1D311</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -685,11 +662,6 @@ update()</string>
 		<dict>
 			<key>ypos</key>
 			<real>1210</real>
-		</dict>
-		<key>1E595948-1B12-49BD-A2D3-FDAF006C426E</key>
-		<dict>
-			<key>ypos</key>
-			<real>1090</real>
 		</dict>
 		<key>33250252-1082-475B-9FB6-689D5DF600C7</key>
 		<dict>
