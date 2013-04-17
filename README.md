@@ -14,6 +14,7 @@ Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredap
 ## Features: 
 
 * Add movies to wanted list
+* List movies on wanted list and open IMDB page for selected movie
 * Do a forced search for movies on the wanted list
 * Update CouchPotato
 * Open CouchPotato webinterface
