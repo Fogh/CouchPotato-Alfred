@@ -171,6 +171,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>B2C34A2A-DCCC-4FA1-92F4-6C7C8C86D506</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5DC0213D-D686-4AA6-AC66-5EA875CAA8F6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</key>
 		<array>
 			<dict>
@@ -406,6 +417,34 @@ open_browser()</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>couch want</string>
+				<key>runningsubtext</key>
+				<string>Loading movies...</string>
+				<key>script</key>
+				<string>from couchpotatoAlfred import list_wanted_movies
+list_wanted_movies()</string>
+				<key>subtext</key>
+				<string>Movies on wanted list which have not been downloaded yet</string>
+				<key>title</key>
+				<string>List movies on wanted list</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B2C34A2A-DCCC-4FA1-92F4-6C7C8C86D506</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
@@ -499,6 +538,22 @@ ping()</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>040049F8-E6EC-439F-8992-D8867357178C</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>from couchpotatoAlfred import open_imdb
+open_imdb("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5DC0213D-D686-4AA6-AC66-5EA875CAA8F6</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -649,8 +704,8 @@ update()</string>
 	<key>readme</key>
 	<string>Setup:
 
-- Use the keyword couch api to set your API key.
-- If you host CouchPotato elsewhere than localhost use the keyword couch host to set your host URL.</string>
+- Use the keyword "couch api" to set your API key.
+- If you host CouchPotato elsewhere than localhost use the keyword "couch host" to set your host URL.</string>
 	<key>uidata</key>
 	<dict>
 		<key>040049F8-E6EC-439F-8992-D8867357178C</key>
@@ -692,6 +747,11 @@ update()</string>
 		<dict>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>5DC0213D-D686-4AA6-AC66-5EA875CAA8F6</key>
+		<dict>
+			<key>ypos</key>
+			<real>1330</real>
 		</dict>
 		<key>618B8709-249D-4E0E-A3D8-322A79792A65</key>
 		<dict>
@@ -742,6 +802,11 @@ update()</string>
 		<dict>
 			<key>ypos</key>
 			<real>1090</real>
+		</dict>
+		<key>B2C34A2A-DCCC-4FA1-92F4-6C7C8C86D506</key>
+		<dict>
+			<key>ypos</key>
+			<real>1330</real>
 		</dict>
 		<key>C809FBDE-E7BB-4B58-BAD6-F8B867FDB3A8</key>
 		<dict>

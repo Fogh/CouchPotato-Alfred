@@ -32,6 +32,7 @@ def set_host(url):
 def get_host():
     return Settings().get("host", _DEFAULTHOST)
 
+
 def url():
     if get_APIKey():
         return get_host() + "/api/" + get_APIKey() + "/"
@@ -57,6 +58,10 @@ def get_data(method_name=""):
 
 def open_browser():
     webbrowser.open(get_host())
+
+
+def open_imdb(identifier):
+    webbrowser.open_new("http://www.imdb.com/title/" + identifier)
 
 
 def isAvailable():
@@ -94,6 +99,20 @@ def search_movie(query):
         movieYear = str(movie['year'])
         identifier = movie['imdb']
         fb.add_item(movieTitle, movieYear, identifier)
+    print fb
+
+
+def list_wanted_movies():
+    data = get_data("movie.list?status=active")
+    fb = Feedback()
+    if data['total'] > 0:
+        for movie in data['movies']:
+            movieTitle = movie['library']['titles'][0]['title']
+            movieYear = str(movie['library']['year'])
+            identifier = movie['library']['identifier']
+            fb.add_item(movieTitle, movieYear, identifier)
+    else:
+        fb.add_item("No movies on the wanted list")
     print fb
 
 
