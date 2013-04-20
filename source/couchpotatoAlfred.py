@@ -22,7 +22,7 @@ def set_APIKey(key=""):
 
 
 def get_APIKey():
-    return Settings().get("apikey")
+    return Settings().get("api_key")
 
 
 def set_host(url):
