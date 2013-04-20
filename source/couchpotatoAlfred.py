@@ -9,7 +9,7 @@ _DEFAULTHOST = "http://localhost:5050"
 
 def set_APIKey(key=""):
     if key:
-        Settings().set(apikey=key.strip())
+        Settings().set(api_key=key.strip())
         print "API key changed!"
     else:
         data = get_data()
