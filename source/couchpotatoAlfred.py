@@ -1,5 +1,6 @@
 import json
 import urllib2
+import urllib
 import webbrowser
 from alp.settings import Settings
 from feedback import Feedback
@@ -9,7 +10,7 @@ _DEFAULTHOST = "http://localhost:5050"
 
 def set_APIKey(key=""):
     if key:
-        Settings().set(api_key=key.strip())
+        Settings().set(apikey=key.strip())
         print "API key changed!"
     else:
         data = get_data()
@@ -22,7 +23,7 @@ def set_APIKey(key=""):
 
 
 def get_APIKey():
-    return Settings().get("api_key")
+    return Settings().get("apikey")
 
 
 def set_host(url):
@@ -77,6 +78,7 @@ def get_version():
         data = get_data("app.version")
         print data['version']
 
+
 def ping():
     if isAvailable():
         print "CouchPotato is running!"
@@ -91,8 +93,9 @@ def add_movie_by_id(identifier):
     else:
         print "Movie not found!"
 
+
 def search_movie(query):
-    data = get_data("movie.search" + "?q=" + query)
+    data = get_data("movie.search" + "?q=" + urllib.quote(query))
     fb = Feedback()
     for movie in data['movies']:
         movieTitle = movie['titles'][0]
