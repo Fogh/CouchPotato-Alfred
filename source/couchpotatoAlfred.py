@@ -131,8 +131,8 @@ def forced_search():
 
 def update():
     if isAvailable():
-        data = get_data("updater.check")
-        update_avail = data['update_available']
+        data = get_data("updater.update")
+        update_avail = data['success']
         if update_avail:
             print "Update available - Updating.."
         else:
