@@ -25,8 +25,8 @@ Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredap
 
 ## Setup
 
-* Use the keyword `couch api` to set your API key.
-* If you host CouchPotato elsewhere than localhost use the keyword `couch host` to set your host URL.
+* Use the keyword `couch api <API key>` to set your API key.
+* If you host CouchPotato elsewhere than localhost use the keyword `couch host <host url>` to set your host URL.
 
 ## Contribute
 
