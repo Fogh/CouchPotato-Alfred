@@ -54,8 +54,8 @@ def get_data(method_name=""):
     req.add_header("Accept", "application/json")
     try:
         res = urllib2.urlopen(req)
-    except urllib2.URLError as err:
-        print "Can't connect to CouchPotato ({})".format(err)
+    except urllib2.URLError:
+        print "Can't connect to CouchPotato"
         raise SystemExit()
 
     return json.loads(res.read())
