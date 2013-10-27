@@ -1,6 +1,7 @@
 import json
 import urllib2
 import urllib
+from urlparse import urljoin
 import webbrowser
 from alp.settings import Settings
 from feedback import Feedback
@@ -27,7 +28,10 @@ def get_APIKey():
 
 
 def set_host(url):
-    Settings().set(host=url.strip().rstrip("/"))
+    url = url.strip()
+    if not url.endswith('/'):
+        url += '/'
+    Settings().set(host=url)
 
 
 def get_host():
@@ -36,7 +40,7 @@ def get_host():
 
 def url():
     if get_APIKey():
-        return get_host() + "/api/" + get_APIKey() + "/"
+        return urljoin(get_host(), "api/" + get_APIKey() + "/")
     else:
         print "API key is not defined"
 
@@ -45,7 +49,7 @@ def get_data(method_name=""):
     if method_name:
         req = urllib2.Request(url() + method_name)
     else:
-        req = urllib2.Request(get_host() + "/getkey/")
+        req = urllib2.Request(urljoin(get_host(), "/getkey/"))
 
     req.add_header("Accept", "application/json")
     try:
