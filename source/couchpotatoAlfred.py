@@ -28,34 +28,34 @@ def get_APIKey():
 
 
 def set_host(url):
-    url = url.strip()
-    if not url.endswith('/'):
-        url += '/'
-    Settings().set(host=url)
+    Settings().set(host=url.strip())
 
 
-def get_host():
-    return Settings().get("host", _DEFAULTHOST)
+def get_host(trailing_slash=False):
+    host = Settings().get("host", _DEFAULTHOST)
+    if trailing_slash and not host.endswith('/'):
+        host += '/'
+    return host
 
 
 def url():
     if get_APIKey():
-        return urljoin(get_host(), "api/" + get_APIKey() + "/")
+        return urljoin(get_host(True), "api/{}/".format(get_APIKey()))
     else:
         print "API key is not defined"
 
 
 def get_data(method_name=""):
     if method_name:
-        req = urllib2.Request(url() + method_name)
+        req = urllib2.Request(urljoin(url(), method_name))
     else:
-        req = urllib2.Request(urljoin(get_host(), "/getkey/"))
+        req = urllib2.Request(urljoin(get_host(True), "getkey/"))
 
     req.add_header("Accept", "application/json")
     try:
         res = urllib2.urlopen(req)
-    except urllib2.URLError:
-        print "Can't connect to CouchPotato"
+    except urllib2.URLError as err:
+        print "Can't connect to CouchPotato ({})".format(err)
         raise SystemExit()
 
     return json.loads(res.read())
