@@ -1,5 +1,6 @@
 CouchPotato-Alfred
 ==================
+![](http://img.shields.io/github/release/Fogh/CouchPotato-Alfred.svg)
 
 Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredapp.com/)
 
