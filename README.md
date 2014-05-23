@@ -35,4 +35,4 @@ If you find any bugs or if you think the workflow is missing a feature, don't he
 
 ## License
 
-This workflow and code is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+This workflow and code is licensed under the [MIT license](https://github.com/Fogh/CouchPotato-Alfred/blob/master/LICENSE).
