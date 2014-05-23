@@ -32,7 +32,3 @@ Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredap
 ## Contribute
 
 If you find any bugs or if you think the workflow is missing a feature, don't hesitate to submit a pull request or create an issue.
-
-## License
-
-This workflow and code is licensed under the [MIT license](https://github.com/Fogh/CouchPotato-Alfred/blob/master/LICENSE).
