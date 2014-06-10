@@ -18,7 +18,7 @@ Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredap
 * List movies on wanted list and open IMDB page for selected movie
 * Do a forced search for movies on the wanted list
 * Update CouchPotato
-* Open CouchPotato webinterface
+* Open CouchPotato web interface
 * Get the version of CouchPotato
 * Ping CouchPotato
 * Restart CouchPotato
@@ -27,7 +27,7 @@ Control [CouchPotato](https://couchpota.to/) from [Alfred 2](http://www.alfredap
 ## Setup
 
 * Use the keyword `couch api <API key>` to set your API key.
-* If you host CouchPotato elsewhere than localhost use the keyword `couch host <host URL>` to set your host URL.
+* If you host CouchPotato elsewhere than localhost, use the keyword `couch host <host URL>` to set your host URL.
 
 ## Contribute
 
