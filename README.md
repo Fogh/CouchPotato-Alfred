@@ -1,3 +1,11 @@
+<p align="center">
+<a href="https://github.com/Fogh/SABnzbd-Alfred">SABnzdb-Alfred</a> &bull; 
+<b>CouchPotato-Alfred</b> &bull; 
+<a href="https://github.com/Fogh/Sickbeard-Alfred">SickBeard-Alfred</a>
+</p>
+
+-------
+
 CouchPotato-Alfred
 ==================
 ![Tag version](http://img.shields.io/github/tag/Fogh/CouchPotato-Alfred.svg?style=flat)
